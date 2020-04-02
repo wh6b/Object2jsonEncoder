@@ -6,8 +6,8 @@ from datetime import datetime
 
 class Object2jsonEncoder(json.JSONEncoder):
   def default(self, obj):
-    #logging.debug(o)
-    #logging.debug(type(o))
+    #logging.debug(obj)
+    #logging.debug(type(obj))
     try :
       return { str(obj) : obj.__dict__ }
     except:
